@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Move — Mini rebuild</title>
+  <link rel="icon" href="./favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="./favicon.svg" width="48" height="48" alt="Logo">
+      </div>
+      <div>
+        <h1>Go Move — Mini rebuild</h1>
+        <p class="lead">Ricostruzione da zero: design, icone, tasto WhatsApp fluttuante e calcolatore.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2 style="margin-top:0">Veicoli (design estratto)</h2>
+          <div class="vehicles">
+            <div class="vehicle"><div class="thumb">P</div><div><h4>Fiat Panda</h4><div class="price">40 €/giorno</div></div></div>
+            <div class="vehicle"><div class="thumb">S</div><div><h4>Smart ForFour</h4><div class="price">48 €/giorno</div></div></div>
+            <div class="vehicle"><div class="thumb">J</div><div><h4>Jeep Renegade</h4><div class="price">60 €/giorno</div></div></div>
+            <div class="vehicle"><div class="thumb">M</div><div><h4>SYM Symphony 125</h4><div class="price">30 €/giorno</div></div></div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h2 style="margin-top:0">Icone di servizio (estratte)</h2>
+          <p style="margin:6px 0 12px;color:var(--muted)">Icone SVG ricreate con stile pulito e scalabile.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div class="card" style="display:flex;align-items:center;gap:10px">
+              <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 10h5v5H7z" opacity=".15"></path><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM5 20V9h14v11H5z"></path></svg>
+              <div><strong>Disponibilità</strong><div style="color:var(--muted);font-size:13px">Calendario</div></div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:10px">
+              <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2L2 7l10 5 10-5z" opacity=".12"></path><path fill="currentColor" d="M12 13l8-4.5V18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8.5L12 13z"></path></svg>
+              <div><strong>Mappa</strong><div style="color:var(--muted);font-size:13px">Posizione</div></div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:10px">
+              <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1L3 5v6c0 5 3.7 9.7 9 11 5.3-1.3 9-6 9-11V5l-9-4z"></path></svg>
+              <div><strong>Assicurazione</strong><div style="color:var(--muted);font-size:13px">Coperture</div></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section class="card calc">
+          <h3>Calcolatore (estratto dall'index)</h3>
+          <form id="quoteForm">
+            <div class="fields">
+              <div>
+                <label for="start">Data inizio</label>
+                <input id="start" type="date" required>
+              </div>
+              <div>
+                <label for="end">Data fine</label>
+                <input id="end" type="date" required>
+              </div>
+              <div>
+                <label for="category">Categoria</label>
+                <select id="category"><option value="utilitaria">Utilitaria</option><option value="suv">SUV</option><option value="scooter">Scooter</option><option value="moto">Moto</option></select>
+              </div>
+              <div>
+                <label for="model">Modello (opzionale)</label>
+                <select id="model"><option value="">Nessuno</option><option>Fiat Panda</option><option>Smart ForFour (automatico)</option><option>Jeep Renegade</option><option>SYM Symphony 125</option><option>Honda X-ADV 750</option></select>
+              </div>
+              <div>
+                <label for="age">Età conducente</label>
+                <input id="age" type="number" min="18" max="85" placeholder="30">
+              </div>
+              <div>
+                <label>&nbsp;</label>
+                <div style="font-size:13px;color:var(--muted)">Add-on</div>
+                <div class="addons">
+                  <label><input type="checkbox" id="gps"> Navigatore (+5€/gg)</label>
+                  <label><input type="checkbox" id="seat"> Seggiolino (+4€/gg)</label>
+                  <label><input type="checkbox" id="extraIns"> Assicurazione extra (+8€/gg)</label>
+                </div>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn primary" type="submit">Calcola</button>
+              <button class="btn" type="button" id="miniQuote">Stima rapida</button>
+            </div>
+          </form>
+          <div id="result" class="result" aria-live="polite"></div>
+        </section>
+
+        <section style="margin-top:12px" class="card">
+          <strong>Legenda</strong>
+          <p style="margin:8px 0 0;color:var(--muted);font-size:14px">Questo mini-progetto mantiene solo i punti richiesti: design (palette, tipografia, card), icone, tasto WhatsApp fluttuante e il calcolatore prezzi.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year">2025</span> Go Move — Esempio ricostruito
+    </footer>
+  </div>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-fab" href="https://wa.me/393451116918?text=Ciao!%20Vorrei%20info" target="_blank" rel="noopener" aria-label="Chatta su WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 0 0 3 21l1.6-5.8A11 11 0 0 0 20.5 3.5zm-7.1 14.2c-1 0-1.9-.3-2.6-.8l-.2-.1-1.6.5.5-1.6-.1-.2a4.9 4.9 0 0 1-.8-2.6c0-2.7 2.2-5 5-5 1.3 0 2.3.4 3.1 1.1.8.7 1.2 1.7 1.2 2.8 0 2.8-2.2 5-5 5z"></path>
+    </svg>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
