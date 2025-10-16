@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preventivo — Go Move Rent</title>
+  <link rel="icon" href="./favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>📍 Ercolano (NA) • Assistenza 7/7</div>
+      <div><a href="tel:+393451116918">+39 345 111 6918</a> • <a href="mailto:gomoverent@gmail.com">gomoverent@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <a class="brand" href="#"><img src="./favicon.svg" width="28" height="28" alt=""> Go Move Rent</a>
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">Auto</a>
+        <a href="#">Scooter & Moto</a>
+        <a href="#">Preventivo</a>
+        <a href="#">Prenota</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="pagehead container">
+    <h1>Preventivo</h1>
+    <p class="lead">Calcola una stima in pochi secondi. Ritiro e riconsegna: Ercolano (NA).</p>
+  </div>
+
+  <div class="container content">
+    <main>
+      <section class="card">
+        <h2>Calcola preventivo</h2>
+        <p class="lead">Compila i campi: il riepilogo si aggiorna in tempo reale.</p>
+        <form id="quoteForm" class="form-grid">
+          <div><label for="start">Data e ora ritiro</label><div class="sub">Obbligatorio</div></div>
+          <div><input id="start" type="datetime-local" required></div>
+          <div><label for="end">Data e ora riconsegna</label><div class="sub">Obbligatorio</div></div>
+          <div><input id="end" type="datetime-local" required></div>
+          <div><label for="category">Categoria</label></div>
+          <div>
+            <select id="category">
+              <option value="city">City Car</option>
+              <option value="berlina">Berlina</option>
+              <option value="suv">SUV</option>
+              <option value="scooter">Scooter</option>
+              <option value="moto">Moto</option>
+            </select>
+          </div>
+          <div><label for="model">Modello</label></div>
+          <div>
+            <select id="model">
+              <option value="">Seleziona...</option>
+              <option>Fiat Panda</option>
+              <option>Smart ForFour (automatico)</option>
+              <option>Jeep Renegade</option>
+              <option>SYM Symphony 125</option>
+              <option>Honda X-ADV 750</option>
+            </select>
+          </div>
+          <div><label for="age">Età conducente</label><div class="sub">Min 18</div></div>
+          <div><input id="age" type="number" min="18" max="85" placeholder="30"></div>
+          <div><label>Extra</label></div>
+          <div>
+            <label><input type="checkbox" id="gps"> Navigatore</label> &nbsp; 
+            <label><input type="checkbox" id="seat"> Seggiolino</label> &nbsp; 
+            <label><input type="checkbox" id="extraDriver"> Guidatore aggiuntivo</label> &nbsp; 
+            <label><input type="checkbox" id="extraIns"> Kasko totale</label>
+            <div class="sub">€/giorno</div>
+          </div>
+          <div></div>
+          <div class="actions">
+            <button class="btn primary" type="submit">Calcola preventivo</button>
+            <button class="btn" type="button" id="copyLink">Copia link</button><span id="copied" style="margin-left:8px;color:var(--muted)"></span>
+          </div>
+        </form>
+        <div id="summary" style="margin-top:12px"></div>
+        <p class="lead" style="margin-top:10px">I prezzi sono indicativi e verranno confermati in fase di prenotazione.</p>
+      </section>
+    </main>
+
+    <aside>
+      <section class="card">
+        <h3>Riepilogo</h3>
+        <p class="lead">Vedi totali, giorni ed extra selezionati.</p>
+        <div id="summaryAside"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div>
+        <h4>Servizi</h4>
+        <ul>
+          <li>Noleggio auto</li>
+          <li>Scooter & Moto</li>
+          <li>Preventivo</li>
+          <li>Prenota</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <p>+39 3451116918<br>gomoverent@gmail.com<br>Ercolano (NA)</p>
+        <p>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> •
+          <a href="https://wa.me/393451116918?text=Ciao!%20Vorrei%20info" target="_blank" rel="noopener">WhatsApp</a>
+        </p>
+        <small>© Go Move s.r.l. — P.IVA 00994550945</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-fab" href="https://wa.me/393451116918?text=Ciao!%20Vorrei%20info" target="_blank" rel="noopener" aria-label="Chatta su WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 0 0 3 21l1.6-5.8A11 11 0 0 0 20.5 3.5zm-7.1 14.2c-1 0-1.9-.3-2.6-.8l-.2-.1-1.6.5.5-1.6-.1-.2a4.9 4.9 0 0 1-.8-2.6c0-2.7 2.2-5 5-5 1.3 0 2.3.4 3.1 1.1.8.7 1.2 1.7 1.2 2.8 0 2.8-2.2 5-5 5z"></path>
+    </svg>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
