@@ -1,0 +1,26 @@
+{
+  "__titles__": {
+    "index.html": "Home — Go Move Rent",
+    "auto.html": "Cars — Go Move Rent",
+    "moto.html": "Motorbikes — Go Move Rent",
+    "prenota.html": "Book — Go Move Rent",
+    "preventivo.html": "Estimate — Go Move Rent",
+    "404.html": "Page not found — Go Move Rent"
+  },
+  "__selectors__": {
+    "a.whatsapp-fab": {
+      "attr": {
+        "aria-label": "Chat on WhatsApp"
+      }
+    },
+    "footer .foot-note a[href=\"#top\"]": {
+      "text": "Back to top ↑"
+    },
+    "a.btn.primary": {
+      "text": "Book"
+    },
+    "a.btn:not(.primary)": {
+      "text": "Get quote"
+    }
+  }
+}
