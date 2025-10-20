@@ -22,14 +22,16 @@
   function apply(dict){
     if(dict["__titles__"]){ const page=(location.pathname.split('/').pop()||"index.html"); if(dict["__titles__"][page]) document.title=dict["__titles__"][page]; }
     if(dict["__selectors__"]){
-      for(const[sel,conf] of Object.entries(dict["__selectors__"])) document.querySelectorAll(sel).forEach(el=>{
-        if(typeof conf==="string"){ el.textContent=conf; }
-        else if(conf && typeof conf==="object"){
-          if(conf.text!=null) el.textContent=conf.text;
-          if(conf.html!=null) el.innerHTML=conf.html;
-          if(conf.attr){ for(const[k,v] of Object.entries(conf.attr)) el.setAttribute(k,v); }
-        }
-      });
+      for(const[sel,conf] of Object.entries(dict["__selectors__"])){
+        document.querySelectorAll(sel).forEach(el=>{
+          if(typeof conf==="string"){ el.textContent=conf; }
+          else if(conf && typeof conf==="object"){
+            if(conf.text!=null) el.textContent=conf.text;
+            if(conf.html!=null) el.innerHTML=conf.html;
+            if(conf.attr){ for(const[k,v] of Object.entries(conf.attr)) el.setAttribute(k,v); }
+          }
+        });
+      }
     }
     if(dict["__attrsReplace__"]){
       for(const[sel,attrs] of Object.entries(dict["__attrsReplace__"])) document.querySelectorAll(sel).forEach(el=>{
