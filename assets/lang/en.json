@@ -85,8 +85,6 @@
     "Invia prenotazione": "Send booking",
     "Calcola preventivo": "Calculate estimate",
     "Compila i campi: il riepilogo si aggiorna in tempo reale.": "Fill in the fields; the summary updates in real time."
-    "Data/ora ritiro.": "Pick-up date/time."
-    "Data/ora consegna.": "Delivery date/time."
   },
   "__replacePartial__": {
     "/giorno": "/day"
