@@ -36,6 +36,7 @@
     "details:nth-of-type(3) summary": "Which documents are required?"
   },
   "__replace__": {
+    "✔ Servizio di trasferimento gratuito": "Transfer free",
     "Assistenza 7/7": "Support 7/7",
     "Ti seguiamo in ogni fase.": "We support you at every step.",
     "La nostra flotta": "Our fleet",
