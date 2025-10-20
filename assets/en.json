@@ -1,0 +1,61 @@
+{
+  "__titles__": {
+    "index.html": "Home — Go Move Rent",
+    "auto.html": "Cars — Go Move Rent",
+    "moto.html": "Scooters & Motorbikes — Go Move Rent",
+    "prenota.html": "Book — Go Move Rent",
+    "preventivo.html": "Estimate — Go Move Rent",
+    "404.html": "Page not found — Go Move Rent"
+  },
+  "__selectors__": {
+    "nav.menu a[href=\"index.html\"]": "Home",
+    "nav.menu a[href=\"auto.html\"]": "Cars",
+    "nav.menu a[href=\"moto.html\"]": "Scooters & Motorbikes",
+    "nav.menu a[href=\"preventivo.html\"]": "Estimate",
+    "nav.menu a[href=\"prenota.html\"]": "Book",
+    ".hero .title": {
+      "html": "Car, scooter, and motorbike rental in <span class=\"hl\">Ercolano (NA)</span>"
+    },
+    ".hero .lead": "Clear rates, flexible coverage, and 7/7 support. Pick-up and drop-off at our Ercolano (NA) office.",
+    "form#bookingHero .btn.primary": "Search",
+    "form#bookingHero a.btn": "Go to booking",
+    ".card.vehicle .btn.primary": "Book",
+    ".card.vehicle .btn:not(.primary)": "Calculate",
+    ".fleet-title, .grid-title": "Our fleet",
+    "a.view-all-cars": "View all cars →"
+  },
+  "__replace__": {
+    "✔ Servizio di trasferimento gratuito": "✔ Free transfer service",
+    "✔ Km flessibili, lavaggio incluso": "✔ Flexible kms, wash included",
+    "✔ Prenotazione veloce in pochi minuti": "✔ Fast booking in minutes",
+    "Tariffe chiare": "Clear rates",
+    "Prezzi trasparenti e nessuna sorpresa.": "Transparent prices and no surprises.",
+    "Flotta curata": "Well-maintained fleet",
+    "City, SUV, scooter e moto.": "City, SUV, scooters, and motorbikes.",
+    "(automatico)": "(automatic)",
+    "Località di ritiro": "Pick-up location",
+    "Località di consegna": "Drop-off location",
+    "Data/ora ritiro": "Pick-up date/time",
+    "Data/ora consegna": "Drop-off date/time",
+    "Categoria": "Category",
+    "Età conducente": "Driver age",
+    "Sì, puoi selezionarlo in fase di prenotazione.": "Yes, you can select it during booking.",
+    "No, non e necessaria nè la carta di credito nè la cauzione come garanzia.": "No, neither a credit card nor a deposit is required as a guarantee.",
+    "Documento d’identità e patente di guida.": "ID card and driving licence.",
+    "Ritiro e riconsegna:": "Pick-up and drop-off:",
+    "Assistenza 7/7.": "Support 7/7.",
+    "Servizi": "Services",
+    "Noleggio auto": "Car rental",
+    "Contatti": "Contacts",
+    "Torna su ↑": "Back to top ↑",
+    "P.IVA": "VAT",
+    "Ci troviamo ad Ercolano (NA) in Via Trentola 156": "We are in Ercolano (NA) at Via Trentola 156"
+  },
+  "__replacePartial__": {
+    "/giorno": "/day",
+    "gg/mm/aaaa": "dd/mm/yyyy",
+    "Servizio di trasferimento gratuito": "Free transfer service",
+    "Km flessibili, lavaggio incluso": "Flexible kms, wash included",
+    "Prenotazione veloce in pochi minuti": "Fast booking in minutes"
+  }
+}
