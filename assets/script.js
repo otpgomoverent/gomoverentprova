@@ -52,13 +52,6 @@ const modelPrices = {
   "Honda X-ADV 750": 70
 };
 
-// Prezzi base per categoria (fallback)
-function basePriceFor(category, vehicle){
-  if (vehicle && modelPrices[vehicle] != null) return modelPrices[vehicle];
-  const map = { city:40, berlina:60, suv:70, scooter:30, moto:70 };
-  return map[category] || 0;
-}
-
 /* ====== MOTORE PREZZI (NO ricorsione) ====== */
 function computeQuote(data){
   const days = Math.max(1, Number(data.days||0));
