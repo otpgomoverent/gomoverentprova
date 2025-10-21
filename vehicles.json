@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": "panda-1",
+      "type": "car",
+      "category": "City Car",
+      "brand": "Fiat",
+      "model": "Panda",
+      "transmission": "manual",
+      "price_per_day": 40,
+      "available": true,
+      "blackout_dates": [],
+      "images": [
+        {
+          "url": "/assets/uploads/panda.jpg"
+        }
+      ],
+      "description": "City car compatta, ideale in città.",
+      "extras": {
+        "gps": false,
+        "child_seat": true,
+        "additional_driver": true
+      }
+    },
+    {
+      "id": "renegade",
+      "type": "car",
+      "category": "SUV",
+      "brand": "Jeep",
+      "model": "Renegade",
+      "transmission": "automatic",
+      "price_per_day": 60,
+      "available": true,
+      "blackout_dates": [],
+      "images": [
+        {
+          "url": "/assets/uploads/renegade.jpg"
+        }
+      ],
+      "description": "SUV confortevole per ogni itinerario.",
+      "extras": {
+        "gps": true,
+        "child_seat": false,
+        "additional_driver": true
+      }
+    },
+    {
+      "id": "sym-125",
+      "type": "scooter",
+      "category": "Scooter",
+      "brand": "SYM",
+      "model": "Symphony 125",
+      "transmission": "automatic",
+      "price_per_day": 30,
+      "available": true,
+      "blackout_dates": [],
+      "images": [
+        {
+          "url": "/assets/uploads/sym125.jpg"
+        }
+      ],
+      "description": "Scooter agile per muoversi in città.",
+      "extras": {
+        "gps": false,
+        "child_seat": false,
+        "additional_driver": false
+      }
+    }
+  ]
+}
