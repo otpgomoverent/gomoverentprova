@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: OWNER/REPO
+  branch: main
+  # Quando configuri il proxy OAuth (es. Cloudflare Worker), aggiungi:
+  # base_url: https://IL_TUO_WORKER.workers.dev
+  # auth_endpoint: /auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "fleet"
+    label: "Veicoli"
+    format: "json"
+    files:
+      - file: "assets/data/vehicles.json"
+        label: "Flotta"
+        name: "vehicles"
+        fields:
+          - label: "Veicoli"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.brand}} {{fields.model}} ({{fields.category}}) – €{{fields.price_per_day}}/day"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Tipo", name: "type", widget: "select", options: ["car","scooter","motorbike"], default: "car" }
+              - { label: "Categoria", name: "category", widget: "select", options: ["City Car","Sedan","SUV","Scooter","Motorbike"] }
+              - { label: "Marca", name: "brand", widget: "string" }
+              - { label: "Modello", name: "model", widget: "string" }
+              - { label: "Cambio", name: "transmission", widget: "select", options: ["manual","automatic"], required: false }
+              - { label: "Prezzo €/giorno", name: "price_per_day", widget: "number", value_type:"float", min: 0 }
+              - { label: "Disponibile", name: "available", widget: "boolean", default: true }
+              - { label: "Date non disponibili (YYYY-MM-DD)", name: "blackout_dates", widget: "list", required: false }
+              - label: "Immagini"
+                name: "images"
+                widget: "list"
+                field: { label: "Immagine", name: "url", widget: "image" }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - label: "Extra inclusi"
+                name: "extras"
+                widget: "object"
+                required: false
+                fields:
+                  - { label:"GPS", name:"gps", widget:"boolean", default:false }
+                  - { label:"Seggiolino", name:"child_seat", widget:"boolean", default:false }
+                  - { label:"Guidatore aggiuntivo", name:"additional_driver", widget:"boolean", default:false }
