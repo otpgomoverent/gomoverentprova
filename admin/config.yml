@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: OWNER/admin
+  repo: gomoverentprova/admin
   branch: main
   # Quando configuri il proxy OAuth (es. Cloudflare Worker), aggiungi:
   # base_url: https://IL_TUO_WORKER.workers.dev
