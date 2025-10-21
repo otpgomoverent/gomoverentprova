@@ -1,7 +1,7 @@
 // assets/vehicles.js — disegna le card dai dati JSON
 (async () => {
   try {
-    const res = await fetch("/assets/data/vehicles.json", { cache: "no-cache" });
+    const res = await fetch("assets/data/vehicles.json", { cache: "no-cache" });
     const data = await res.json();
     const items = Array.isArray(data.items) ? data.items : [];
 
